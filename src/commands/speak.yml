@@ -1,0 +1,11 @@
+description: >
+  This command will have a cow say a message in your logs.
+parameters:
+  message:
+    type: string
+    default: "Mooo!"
+    description: "What will the cow say?"
+steps:
+  - run:
+      name: Let the cow speak
+      command: npx cowsay << parameters.message >>
