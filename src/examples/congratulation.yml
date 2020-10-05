@@ -1,0 +1,13 @@
+description: >
+  Congratulate the user on the pipeline passing.
+usage:
+  version: 2.1
+  orbs:
+    cowsay: kbravh/cowsay-orb@dev:alpha
+    node: circleci/node@4.0.1
+  jobs:
+    speak:
+      executor: node/default
+      steps:
+        - cowsay/speak:
+            message: "Your pipeline looks great!"
